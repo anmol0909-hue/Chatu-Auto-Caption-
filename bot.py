@@ -104,8 +104,10 @@ async def generate_caption(client, message):
             user_prompt += f" Context: {message.caption}"
             
         response = client_ai.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=user_prompt,
+    model='gemini-1.5-flash',
+    contents=user_prompt,
+)
+
         )
         caption_text = response.text
 
