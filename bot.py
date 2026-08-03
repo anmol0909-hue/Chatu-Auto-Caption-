@@ -27,7 +27,8 @@ if GOOGLE_API_KEY:
     genai.configure(api_key=GOOGLE_API_KEY)
 
 # Gemini Model Config (ताज़ा मॉडल)
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = model = genai.GenerativeModel('gemini-1.5-flash')
+
 
 app = Client("AutoCaptionBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
