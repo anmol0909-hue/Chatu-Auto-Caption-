@@ -46,10 +46,11 @@ async def generate_caption(client, message):
         user_prompt = "Create a catchy, engaging social media caption with trending hashtags for a post."
         if message.caption:
             user_prompt += f" Context: {message.caption}"
-            
-        response = client_ai.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=user_prompt,
+            response = client_ai.models.generate_content(
+    model='gemini-1.5-flash',
+    contents=user_prompt,
+)
+
         )
         caption_text = response.text
 
